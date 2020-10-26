@@ -1,0 +1,12 @@
+program
+declare
+list
+of
+variables
+integer
+real
+boolean
+array
+jagged
+size
+values
