@@ -62,7 +62,8 @@ grammar readGrammar(FILE *fp, grammar G)
 			}
 			token = strtok(NULL, " ");
 		}
-		printf("\n");i++;
+		//printf("\n");
+		i++;
 		x =i;
 		char t = fgetc(fp);
 		if(t == EOF) break;
