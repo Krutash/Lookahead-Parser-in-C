@@ -6,12 +6,14 @@
 int main()
 {
 	tokenStream *s =NULL;
-	s = tokeniseSourcecode("t6.txt", s);
-	printf("okay\n");
+	s = tokeniseSourcecode("testcase.txt", s);
+	//printf("okay\n");
 	tokenStream *ptr = s;
-	while(ptr != NULL)
+	int flag = 0;
+	while(ptr != NULL && flag <=10)
 	{
 		printf("%s %s %d\n", ptr->token, ptr->lexeme, ptr->linenumber);
 		ptr = ptr->next;
+		flag ++;
 	}
 }

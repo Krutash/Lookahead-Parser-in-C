@@ -1,12 +1,12 @@
 <program> -> PROGRAM ROOP ROCL BROP <stmtlist> SEMICOLON BRCL
-<stmtlist> -> <stmt> SEMICOLON <stmtlist> SEMICOLON
-<stmtlist> -> <stmt> SEMICOLON
+<stmtlist> -> <stmt> SEMICOLON <stmtlist>
+<stmtlist> -> EPS
 <stmt> -> <declarationlist>
 <stmt> -> <assignmentlist>
 <declarationlist> -> <declaration> SEMICOLON <declarationlist>
-<declarationlist> -> <declaration>
+<declarationlist> -> EPS
 <assignmentlist> -> <assignemnt> SEMICOLON <assignemntlist>
-<assignmentlist> -> <assignment>
+<assignmentlist> -> EPS
 <declaration> -> DECLARE <declaretype> COLON <typespecifier>
 <declaretype> -> LIST OF VARIABLES STRINGCONST
 <declaretype> -> STRINGCONST
@@ -18,18 +18,20 @@
 <arrays> -> <jaggedarray>
 <rectangular> -> ARRAY <rangedim> OF INTEGER
 <rangedim> -> SQOP <low> DOT <high> SQCL <rangedim>
-<rangedim> -> SQOP <low> DOT <high> SQCL
+<rangedim> -> EPS
 <jaggadarray> -> JAGGED ARRAY SQOP <low> DOT <high> SQCL <bracketlist> OF INTEGER SEMICOLON <jaggedlist>
 <low> -> NUM
+<low> -> STRINGCONST
 <high> -> NUM
+<high> -> STRINGCONST
 <bracketlist> -> SQOP SQCL <bracketlist>
-<bracketlist> -> SQOP SQCL
+<bracketlist> -> EPS
 <jaggedlist> -> <R> SQOP NUM SQCL COLON SIZE NUM COLON VALUES BROP <arglist> BRCL
 <R> -> RONE
 <R> -> RTWO
 <R> -> RTHREE
 <arglist> -> <args> SEMICOLON <arglist>
-<arglist> -> <args>
+<arglist> -> EPS
 <args> -> NUMLIST
 <assignment> -> <stringconst> EQUAL <exp>
 <exp> -> <arithmatic>
@@ -40,7 +42,7 @@
 <term> -> <term> MUL <factor>
 <term> -> <term> DIV <factor>
 <term> -> <factor>
-<factor> -> STRINGCONST
 <logical> -> <factor> AND <logical>
 <logical> -> <factor> OR <logical>
 <logical> -> <factor>
+<factor> -> STRINGCONST
