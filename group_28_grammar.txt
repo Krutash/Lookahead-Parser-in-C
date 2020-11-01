@@ -1,0 +1,42 @@
+<program> -> PROGRAM ROOP ROCL BROP <stmt> BRCL
+<stmt> -> DECLARE <declaretype> COLON <typespecifier> <stmt>
+<stmt> -> STRINGCONST <assilhs> <stmt>
+<stmt> -> EPS
+<declaretype> -> LIST OF VARIABLES STRINGCONST <stringlist>
+<declaretype> -> STRINGCONST
+<stringlist> -> STRINGCONST <stringlist>
+<stringlist> -> EPS
+<typespecifier> -> INTEGER SEMICOLON
+<typespecifier> -> REAL SEMICOLON
+<typespecifier> -> BOOLEAN SEMICOLON
+<typespecifier> -> ARRAY <rangedim> OF INTEGER SEMICOLON
+<typespecifier> -> JAGGED ARRAY SQOP <low> DOT <high> SQCL <bracketlist> OF INTEGER SEMICOLON <jaggedlist>
+<rangedim> -> SQOP <low> DOT <high> SQCL <rangedim>
+<rangedim> -> EPS
+<low> -> NUM
+<low> -> STRINGCONST
+<high> -> NUM
+<high> -> STRINGCONST
+<bracketlist> -> SQOP SQCL <bracketlist>
+<bracketlist> -> EPS
+<jaggedlist> -> RONE SQOP NUM SQCL COLON SIZE NUM COLON VALUES BROP <arglist> BRCL <jaggedlist>
+<jaggedlist> -> RTWO SQOP NUM SQCL COLON SIZE NUM COLON VALUES BROP <arglist> BRCL <jaggedlist>
+<jaggedlist> -> RTHREE SQOP NUM SQCL COLON SIZE NUM COLON VALUES BROP <arglist> BRCL <jaggedlist>
+<jaggedlist> -> EPS
+<arglist> -> NUM <args> <sep> <arglist>
+<arglist> -> EPS
+<sep> -> SEMICOLON
+<sep> -> EPS
+<args> -> NUM <args>
+<args> -> EPS
+<assilhs> -> SQOP <args> SQCL EQUAL STRINGCONST <term> SEMICOLON
+<assilhs> -> EQUAL STRINGCONST <term> SEMICOLON
+<term> -> MUL STRINGCONST <term>
+<term> -> DIV STRINGCONST <term>
+<term> -> PLUS STRINGCONST <term>
+<term> -> MINUS STRINGCONST <term>
+<term> -> AND STRINGCONST <term>
+<term> -> OOR STRINGCONST <term>
+<term> -> SQOP <args> SQCL <term>
+<term> -> EPS
+<bool> -> EPS

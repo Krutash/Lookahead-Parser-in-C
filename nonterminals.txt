@@ -1,0 +1,15 @@
+<program>
+<stmt>
+<declaretype>
+<stringlist>
+<typespecifier>
+<rangedim>
+<low>
+<high>
+<bracketlist>
+<jaggedlist>
+<arglist>
+<sep>
+<args>
+<assilhs>
+<term>
