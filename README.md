@@ -7,18 +7,29 @@ Author : Utkarsh Kumar
 3. The program takes the source code in simple .txt format.
 4. The program takes argument file at run time.
 5. Please refer to Grammar.txt for syntax of the source code.
-6. Further coding details are provided below here:
+6. Further coding details are provided below.
+7. This Project was completed for partial completion of 
+   Principle of Programing Languages course at BITS Pilani.
 ***************************************************************************************************************
 CODING DETAILS:
 
 1.	IDs  and Names : 2017B2A71008P UTKARSH KUMAR
 2.	Mention the names of the Submitted files :
-1.) def.h                      7.) read.c              13.) t6.txt
-2.) driver.c                   8.) t1.txt              14.) terminals.txt  
-3.) group_28_grammer.txt       9.) t2.txt              15.) token.c  
-4.) makefile                   10.) t3.txt              
-5.) nonterminals.txt           11.) t4.txt          
-6.) parseTree.c                12.) t5.txt
+	1.) def.h                                    
+	2.) driver.c                                  
+	3.) group_28_grammer.txt                       
+	4.) makefile                                 
+	5.) nonterminals.txt                     
+	6.) parseTree.c                
+	7.) read.c
+	8.) t1.txt
+	9.) t2.txt
+	10.) t3.txt
+	11.) t4.txt
+	12.) t5.txt
+	13.) t6.txt
+	14.) terminals.txt
+	15.) token.c
 
 3.	Total number of submitted files: 15
 4.	Have you mentioned your names and IDs at the top of each file (and commented well)? (Yes/ no) yes
