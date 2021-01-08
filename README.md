@@ -1,30 +1,85 @@
-# Language Implementation
+******************************
+Author : Utkarsh Kumar
+******************************
+1. Please refer to Language_Description.pdf for details of 
+  Language implemented.
+2. Run makefile to generated required executable.
+3. The program takes the source code in simple .txt format.
+4. The program takes argument file at run time.
+5. Please refer to Grammar.txt for syntax of the source code.
+6. Further coding details are provided below here:
+***************************************************************************************************************
+CODING DETAILS:
 
-The language is specifically designed to compute expressions involving arithmetic and logical operators. The
-operands can be of different types such as integer, real, boolean and arrays. The language implements two types
-of arrays- rectangular and jagged. The rows of rectangular arrays have same number of columns, and that of
-jagged arrays can have varying number of columns. A jagged array can be two or three dimensional while the
-rectangular arrays can be of any dimensions. The rectangular arrays can be static or dynamic in nature depending
-upon the range values available at compile time or run time respectively, but the jagged arrays are always static.
-The program uses keywords, variable identifiers, special symbols etc. The variable identifier name can be of at
-most 20 characters, including alphabet, digits and underscore, but it never starts with a digit. The symbols used
-are (, ), {, }, :, ;, [, ] etc. The language has only two types of statements – declaration and assignment statements.
-A declaration statement can declare the type of one variable or type of the list of variables. The keywords used
-in this language are program, declare, list, of, variables, array, size, values, jagged, of, integer, real and boolean.
-An assignment statement has a left valued variable and a right hand side expression. The expression can be
-arithmetic or Boolean, and is constructed recursively. The expression uses arithmetic operators such as plus,
-minus, multiplication and division. The operators * and / have more precedence than the + and -. The Boolean
-operators &&& and ||| (used for logical ‘and’ and ‘or’ respectively) can only be applied to two variables of
-Boolean type. The logical ‘and’ has more precedence than logical ‘or’. The language does not have any relational
-operator such as less than, greater than etc. The values for variables are not initialized for integer, real and Boolean
-data types. However, the array variables are initialized using the description given below. All declaration
-statements must appear before any assignment statement in the program. This means that no assignment statement
-can be written before a declaration statement. The program must have at least one declaration statement and one
-assignment statement.
-Static constants are the numbers available statically at code level. The language supports only integer numbers at
-text level as static constant. This means any number such as 234, 65, 53458754, 01981731, 000, 45, 16 and 7777
-are valid numbers of type integers. The static real numbers are not valid at text level. This means 23.45 is not
-valid in the source code. Similarly, the language does not support true and false as Boolean constants.
-The delimiter used in the program to separate the significant entities is the blank space. This delimiter is imposed
-to save you from implementing the deterministic finite automaton for pattern matching by reaching the accept
-state, which you will implement in your compiler construction.
+1.	IDs  and Names : 2017B2A71008P UTKARSH KUMAR
+2.	Mention the names of the Submitted files :
+1.) def.h                      7.) read.c              13.) t6.txt
+2.) driver.c                   8.) t1.txt              14.) terminals.txt  
+3.) group_28_grammer.txt       9.) t2.txt              15.) token.c  
+4.) makefile                   10.) t3.txt              
+5.) nonterminals.txt           11.) t4.txt          
+6.) parseTree.c                12.) t5.txt
+
+3.	Total number of submitted files: 15
+4.	Have you mentioned your names and IDs at the top of each file (and commented well)? (Yes/ no) yes
+5.	Have you compressed the folder as specified in the submission guidelines? (yes/no) yes
+6.	Have you ensured that the folder does not have any *.o file or any executable file? (yes/no) yes
+
+7.	Grammar and token stream
+	Total number of production rules: 41 
+	Total number of nonterminal: 15
+	Total number of terminals: 34
+	Grammar.txt file created [yes/no]: yes
+	Nonterminal symbols enumerated [yes/no]: no
+	Terminal symbols enumerated [yes/no]: yes
+	Grammar data structure populated successfully [yes/no]: yes
+	Token stream created [yes/no]: yes
+
+8.	Which functions have you implemented?
+[A].	readGrammar ( ) [yes/no] yes
+[B].	tokeniseSourcecode  ( ) [yes/no] yes
+[C].	createParseTree ( ) [yes/no] yes
+[D].	traverseParseTree ( ) [yes/no] no 
+[E].	printParseTree ( ) [yes/no] yes
+[F].	printTypeExpressionTable ( ) [yes/no] no
+
+9.	Parse tree 
+[A].	Constructed (yes/no): yes
+[B].	Printing as per the given format (yes/no): yes
+[C].	Describe the order you have adopted for printing the parse tree nodes (in maximum two lines)
+	preorder traversal in format : Symbol , line, terminal, keyword, grammar rule
+
+10.	Type Expression Table
+[A].	Constructed (yes/no): no
+[B].	Implemented as (lookup table/ hash table): NA
+[C].      Printing as per the given format (yes/no): NA
+[C].	Describe the structure of the type expression accommodating all types (in maximum two lines)
+
+11.	Compilation Details:
+[A].	Implemented in multiple files / single file: Multiple files
+[B].	Makefile works (yes/no): yes
+[C].	Code Compiles (yes/ no): yes
+[D].	Mention the .c files that do not compile: none
+[E].	Any specific function that does not compile: none
+[F].	Ensured the compatibility of your code with the specified gcc version(yes/no): yes
+[G].	Give below the exact commands to compile your code: make
+
+12.	Driver Details: Does it take care of the options specified earlier(yes/no): yes
+13.	Execution 
+[A].	Status (describe in maximum 2 lines): executes successfully and compiles
+[B].	Gives segmentation fault with any of the test cases (1-6) uploaded on the course page. If yes, specify 
+	the testcase file name: none
+[C].	Command line arguments used for input file (yes/no): no (argument to be given by user when code runs)
+
+14.	Specify the language features your code is not able to handle (in maximum one line) : reads, 
+	tokenizes and creates parse Tree for all features except for type checking.
+15.	Are you availing the lifeline (Yes/No): Yes
+
+16.	Declaration: We, Utkarsh Kumar declare that we have 
+	put our genuine efforts in creating the code and have submitted the code developed only by our group. We 
+	have not copied any piece of code from any source. If our code is found plagiarized in any form or degree, we 
+	understand that a disciplinary action as per the institute rules will be taken against us and we will accept 
+	the penalty as decided by the department of Computer Science and Information Systems, BITS, Pilani.
+	        
+	ID 2017B2A71008P   Name: Utkarsh Kumar 		         	          
+Date: 30th October 2020
